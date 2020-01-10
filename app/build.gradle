@@ -1,0 +1,29 @@
+package com.example.locat8
+
+import androidx.appcompat.app.AppCompatActivity
+
+import android.os.Bundle
+import android.view.View
+import android.webkit.WebChromeClient
+import android.webkit.WebSettings
+import android.webkit.WebView
+import android.webkit.WebViewClient
+import android.widget.ProgressBar
+
+class Main2Activity extends AppCompatActivity {
+    WebView webView
+    WebSettings webSettings
+    ProgressBar progressBar
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main2)
+
+        progressBar = findViewById(R.id.progress_bar)
+        //progressBar.setBackgroundColor("#FFA500");
+        webView = findViewById(R.id.webview)
+        webSettings = webView.getSettings()
+        webSettings.setJavaScriptEnabled(true)
+        webView.loadUrl("https://locat8.com/")
+        webView.setWebV
